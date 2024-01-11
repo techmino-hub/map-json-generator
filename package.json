@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "lua-runner": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.8"
+  }
+}
