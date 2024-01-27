@@ -144,17 +144,8 @@
         "unlock": []
     },
     {
-        "name": "classic_n",
-        "x": -400,
-        "y": 0,
-        "size": 40,
-        "shape": 1,
-        "icon": "classic",
-        "unlock": []
-    },
-    {
         "name": "tech_finesse_lock",
-        "x": -200,
+        "x": -400,
         "y": 0,
         "size": 40,
         "shape": 1,
@@ -163,11 +154,92 @@
     },
     {
         "name": "tech_finesse_lock_plus",
-        "x": -50,
+        "x": -250,
         "y": 0,
         "size": 40,
         "shape": 3,
         "icon": "tech_plus",
+        "unlock": []
+    },
+    {
+        "name": "techrash_n",
+        "x": -50,
+        "y": 0,
+        "size": 40,
+        "shape": 3,
+        "icon": "drought",
+        "unlock": ["techrash_u"]
+    },
+    {
+        "name": "techrash_u",
+        "x": 100,
+        "y": 0,
+        "size": 40,
+        "shape": 2,
+        "icon": "drought",
+        "unlock": []
+    },
+    {
+        "name": "marathon_bfmax",
+        "x": 500,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "marathon",
+        "unlock": []
+    },
+    {
+        "name": "classic_n",
+        "x": 700,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "classic",
+        "unlock": []
+    },
+    {
+        "name": "sprintLock",
+        "x": 900,
+        "y": 0,
+        "size": 40,
+        "shape": 3,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintSym",
+        "x": 1100,
+        "y": 0,
+        "size": 40,
+        "shape": 2,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintFix",
+        "x": 900,
+        "y": 150,
+        "size": 40,
+        "shape": 3,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintMD",
+        "x": 1100,
+        "y": 150,
+        "size": 40,
+        "shape": 2,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintSmooth",
+        "x": 900,
+        "y": 300,
+        "size": 40,
+        "shape": 3,
+        "icon": "sprint1",
         "unlock": []
     }
 ]
