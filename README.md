@@ -13,10 +13,10 @@ After installing dependencies, run `main.ts` by doing `ts-node main.ts`
 The `/data/extra_modes.json` file exists because some of the modes in-game are not actually in the mode map.  
 Reasons can include:
 - It's a hidden mode (no I'm not spoiling how to access it; go find out yourself 😉)
-- It's a mode which no longer exist in the latest version of the game
+- It's a mode which no longer exists in the latest version of the game
 - It's an old version of some modes with different/unique mechanics
 
-Note that the Y coordinate aren't the same as the Y coordinates on the normal map; they are shifted down 20 units under the bottommost "non-extra" mode.
+Note that the Y coordinate aren't the same as the Y coordinates on the normal map; they are shifted down 10 units under the bottommost "non-extra" mode.
 
 ## Output Format
 The output will be generated in `./modes.json` by default. The output will be a minified JSON containing an object.  
