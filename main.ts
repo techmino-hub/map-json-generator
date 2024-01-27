@@ -41,7 +41,7 @@ fetch(MODES_URL)
         for(let mode of Object.values(modes) as Mode[]) {
           yOffset = Math.max(yOffset, mode.y);
         }
-        yOffset += 100;
+        yOffset += 200;
 
         // Add extra modes
         const extraModes = JSON.parse(fs.readFileSync(EXTRA_MODES_PATH, 'utf8'));

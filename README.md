@@ -18,7 +18,7 @@ Reasons can include:
 - It's a mode which no longer exists in the latest version of the game
 - It's an old version of some modes with different/unique mechanics
 
-Note that the Y coordinate aren't the same as the Y coordinates on the normal map; they are shifted down 10 units under the bottommost "non-extra" mode.
+Note that the Y coordinate aren't the same as the Y coordinates on the normal map; they are shifted down 200 units under the bottommost "non-extra" mode.
 
 ## Output Format
 The output will be generated in `./modes.json` by default. The output will be a minified JSON containing an object.  
