@@ -3,6 +3,8 @@
     "lua-runner": "^2.0.3"
   },
   "devDependencies": {
-    "@types/node": "^20.10.8"
+    "@types/node": "^20.10.8",
+    "@types/node-fetch": "^2.6.11",
+    "node-fetch": "^2.7.0"
   }
 }

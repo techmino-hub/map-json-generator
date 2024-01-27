@@ -3,7 +3,7 @@ import { error } from 'console';
 import { stderr } from 'process';
 import type { Mode } from './types/mode';
 import fs from 'fs';
-
+import fetch from 'node-fetch';
 
 const OUTPUT_FILE = './modes.json';
 const MODES_URL = 'https://raw.githubusercontent.com/26F-Studio/Techmino/main/parts/modes.lua';
@@ -12,11 +12,10 @@ const TABLE_TO_JSON_PATH = './lua/table_to_json.lua';
 const EXTRA_MODES_PATH = './data/extra_modes.json';
 
 let modes: { [key: string]: Mode } = {};
-let success = true;
 
 fetch(MODES_URL)
-  .then(response => response.text())
-  .then(table => {
+  .then((response: any) => response.text())
+  .then((table: string) => {
     console.log("Modes (lua) fetched successfully");
     fs.writeFileSync(MODES_PATH, table);
     console.log("Modes (lua) saved successfully");
@@ -24,15 +23,15 @@ fetch(MODES_URL)
     exec('lua -v', (err, _, stderr) => {
       if(err || stderr) {
         console.error("Failed to run Lua! Install it here if you haven't: https://www.lua.org/download.html");
-        success = false; return;
+        return;
       }
       exec(`lua ${TABLE_TO_JSON_PATH}`, (err, stdout, stderr) => {
         if(err) {
           console.error(err);
-          success = false; return;
+          return;
         } else if(stderr) {
           console.error("Output from stderr when executing table_to_json.lua: " + stderr);
-          success = false; return;
+          return;
         }
         modes = JSON.parse(stdout);
         console.log("Modes (lua) parsed successfully");
@@ -60,7 +59,7 @@ fetch(MODES_URL)
       })
     })
   })
-  .catch(err => {
+  .catch((err: Error) => {
     console.error("Error fetching modes.lua: ", err);
   });
 

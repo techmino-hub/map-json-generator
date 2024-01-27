@@ -5,6 +5,8 @@ This repo contains code to generate `map.json` for displaying the mode map in [T
 1. [`lua`](https://www.lua.org/download.html)
 2. `ts-node`, installed using `npm i -g ts-node`
 3. node type definitions, installed using `npm i --save-dev @types/node`
+4. node fetch type definitions, installed using `npm i --save-dev @types/node-fetch`
+5. node fetch module, installed using `npm i node-fetch`
 
 ## Running
 After installing dependencies, run `main.ts` by doing `ts-node main.ts`
