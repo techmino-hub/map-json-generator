@@ -25,23 +25,30 @@ The output will be generated in `./modes.json` by default. The output will be a 
 Here's a non-minified JSON for reference:
 ```json
 {
-    "sprint_10l": {
-        "name": "sprint_10l",
-        "shape": 1,
-        "unlock": ["sprint_20l"],
-        "size": 40,
-        "x": 0,
-        "y": 0,
-        "icon": "sprint1"
+    "modes": {
+        "sprint_10l": {
+            "name": "sprint_10l",
+            "shape": 1,
+            "unlock": ["sprint_20l"],
+            "size": 40,
+            "x": 0,
+            "y": 0,
+            "icon": "sprint1"
+        },
+        "sprint_20l": {
+            "name": "sprint_20l",
+            "shape": 1,
+            "unlock": [],
+            "size": 50,
+            "x": -200,
+            "y": 200,
+            "icon": "sprint1"
+        }
     },
-    "sprint_20l": {
-        "name": "sprint_20l",
-        "shape": 1,
-        "unlock": [],
-        "size": 50,
-        "x": -200,
-        "y": 200,
-        "icon": "sprint1"
-    }
+    "starting_mode": "sprint_10l",
+    "min_x": -200,
+    "max_x": 0,
+    "min_y": 0,
+    "max_y": 200
 }
 ```

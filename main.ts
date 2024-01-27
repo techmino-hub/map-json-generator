@@ -52,8 +52,27 @@ fetch(MODES_URL)
         }
         console.log("Extra modes added successfully");
 
+        // Add metadata
+        let min_x = Infinity;
+        let min_y = Infinity;
+        let max_x = -Infinity;
+        let max_y = -Infinity;
+        for(let mode of Object.values(modes) as Mode[]) {
+          min_x = Math.min(min_x, mode.x);
+          min_y = Math.min(min_y, mode.y);
+          max_x = Math.max(max_x, mode.x);
+          max_y = Math.max(max_y, mode.y);
+        }
+        let map: Object = {
+          modes: modes,
+          starting_mode: modes['sprint_10l'] ? 'sprint_10l' : Object.keys(modes)[0],
+          min_x: min_x, min_y: min_y,
+          max_x: max_x, max_y: max_y
+        };
+
+
         // Write output to file
-        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(modes));
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(map));
         console.log("Modes JSON created successfully.");
         console.log("All done! You can view the generated file at " + OUTPUT_FILE)
       })
