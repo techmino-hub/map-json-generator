@@ -1,3 +1,7 @@
+# DEPRECATED
+# This program has been superseded by [its rewrite in Rust](https://github.com/techmino-hub/map-json-generator-2) for ease of installation and use.
+Besides, Node doesn't have good TypeScript support, the code is a mess, and I really want to learn Rust.
+
 # Map.json Generator
 This repo contains code to generate `map.json` for displaying the mode map in [Techmino Hub](https://techmino-hub.github.io/).
 
